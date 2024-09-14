@@ -5,7 +5,11 @@ All notable changes to the **ML/Standard ML** extension will be documented in th
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## Unreleased
-
+### Added
+ - Successor ML syntax support
+    - Language contribution and configuraton
+    - Enablement extension setting
+    - Single-line/Inline comments highlighting
 
 ## 1.0.0 (2024-07-2023)
 Initial release.

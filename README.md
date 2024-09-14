@@ -5,8 +5,7 @@
 
 # ML/Standard ML for Visual Studio Code
 
-The **ML/Standard ML** extension adds language support for ML/Standard ML to Visual Studio Code, including syntax highlighting<!--, editing (IntelliSense) and code running features.--> and code editing features.
-
+The **ML/Standard ML** extension adds language support for ML/Standard ML to Visual Studio Code, including syntax highlighting<!--, editing (IntelliSense) and code running features.--> and code editing features. Support for an extended Successor ML-like syntax can be enabled from the extension settings.
 
 ## Features
 
