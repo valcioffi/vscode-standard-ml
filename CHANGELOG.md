@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased
 
+## 1.1.1 (2024-09-14)
+### Changed
+ - Fixed critical syntax highlight bug introduced in `v1.1.0`.
+
 ## 1.1.0 (2024-09-14)
 ### Added
  - Successor ML syntax support
