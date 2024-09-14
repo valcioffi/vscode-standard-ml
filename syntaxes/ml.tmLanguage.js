@@ -111,17 +111,17 @@ addRepositoryPattern("comments",
 
 addRepositoryPattern("blockComments",
   {
-    "name": "comment.block.ml",
+    "name": "comment.block.sml",
     "begin": "\\(\\*[^)]",
     "end": "(?<!\\()\\*\\)",
     "beginCaptures": {
       "0": {
-        "name": "comment.block.ml"
+        "name": "comment.block.sml"
       }
     },
     "endCaptures": {
       "0": {
-        "name": "comment.block.ml"
+        "name": "comment.block.sml"
       }
     },
     "patterns": [
@@ -232,19 +232,19 @@ addPattern({
   name: "entity.name.function.sml"
 });
 addPattern({
-  name: "string.quoted.double.ml",
+  name: "string.quoted.double.sml",
   begin: "\"",
   end: "\"",
   patterns: [
 
     {
-      name: "constant.character.escape.ml",
+      name: "constant.character.escape.sml",
       match: "\\\\."
     }
   ]
 });
 addPattern({
-  name: "string.quoted.single.ml",
+  name: "string.quoted.single.sml",
   match: "#\"(.)\""
 });
 addPattern({
