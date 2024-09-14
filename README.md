@@ -50,6 +50,7 @@ This is an open source project and contributions from the community are warmly a
 If you're interested in improving the **ML/Standard ML** extension for Visual Studio Code, please take a look at the [contributing guidelines](CONTRIBUTING.md) for information on how to get started.
 
 ---
+If you like and use this extension, consider <a href="https:///www.ko-fi.com/valcioffi">gifting a me coffee</a>.
 
 **Developed with ❤️ by Valenino Cioffi and contributors** 
 

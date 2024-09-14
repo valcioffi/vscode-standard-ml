@@ -1,7 +1,7 @@
 {
   "name": "ml-language-support",
-  "version": "1.0.0",
-  "description": "ML and Standard ML language support for Visual Studio Code",
+  "version": "1.1.0",
+  "description": "ML, Standard ML and Successor ML language support for Visual Studio Code",
   "displayName": "ML/Standard ML",
   "license": "LGPL-3.0-or-later",
   "icon": "./assets/docs/icon.png",

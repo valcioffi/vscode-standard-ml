@@ -5,13 +5,19 @@ All notable changes to the **ML/Standard ML** extension will be documented in th
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
 ## Unreleased
+
+## 1.1.0 (2024-09-14)
 ### Added
  - Successor ML syntax support
     - Language contribution and configuraton
     - Enablement extension setting
     - Single-line/Inline comments highlighting
 
-## 1.0.0 (2024-07-2023)
+### Changed
+ - Fix toupled arguments detection so that it does not detect comments
+ - Fix type declaration highlighting so that it supports touples
+
+## 1.0.0 (2024-07-23)
 Initial release.
 ### Added
 - Syntax Highlighting
