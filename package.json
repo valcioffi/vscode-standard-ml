@@ -1,7 +1,7 @@
 {
   "name": "ml-language-support",
-  "version": "1.0.0",
-  "description": "ML and Standard ML language support for Visual Studio Code",
+  "version": "1.1.0",
+  "description": "ML, Standard ML and Successor ML language support for Visual Studio Code",
   "displayName": "ML/Standard ML",
   "license": "LGPL-3.0-or-later",
   "icon": "./assets/docs/icon.png",
@@ -18,6 +18,7 @@
     "Snippets",
     "Visualization"
   ],
+  "main": "extension.js",
   "contributes": {
     "languages": [
       {
@@ -32,7 +33,17 @@
           ".sml",
           ".cm"
         ],
-        "configuration": "./language-configuration.json"
+        "configuration": "./configuration/sml.json"
+      },
+      {
+        
+        "id": "sml-successor",
+        "aliases": [
+          "Successor ML",
+          "Standard ML (Extended)",
+          "SML"
+        ],
+        "configuration": "./configuration/sml.successor.json"
       }
     ],
     "grammars": [
@@ -40,6 +51,11 @@
         "language": "sml",
         "scopeName": "source.sml",
         "path": "./syntaxes/ml.tmLanguage.json"
+      },
+      {
+        "language": "sml-successor",
+        "scopeName": "source.sml.successor",
+        "path": "./syntaxes/ml.successor.tmLanguage.json"
       }
     ],
     "snippets": [
@@ -48,6 +64,16 @@
         "path": "./snippets/ml.tmSnippet.json"
       }
     ],
+    "configuration": {
+      "title": "Standard ML",
+      "properties": {
+        "SML.successorML": {
+          "type": "boolean",
+          "default": false,
+          "description": "Expand Standard ML with Successor ML-like syntaxes. You migth have to re-open active documents for this to take effect."
+        }
+      }
+    },
     "funding": {
       "type": "individual",
       "url": "https://ko-fi.com/valcioffi"

@@ -6,8 +6,18 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## Unreleased
 
+## 1.1.0 (2024-09-14)
+### Added
+ - Successor ML syntax support
+    - Language contribution and configuration
+    - Enablement extension setting
+    - Single-line/Inline comments highlighting
 
-## 1.0.0 (2024-07-2023)
+### Changed
+ - Fix tuple arguments detection so that it does not detect comments
+ - Fix type declaration highlighting so that it supports tuples
+
+## 1.0.0 (2024-07-23)
 Initial release.
 ### Added
 - Syntax Highlighting
