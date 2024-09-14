@@ -230,7 +230,7 @@ addPattern({
 
 
 addPattern({
-  match: `(${identifier})\\s*\\([^\\*]`,
+  match: `(${identifier})\\s*\\((?=[^\\*])`,
   name: "entity.name.function.sml"
 });
 addPattern({
