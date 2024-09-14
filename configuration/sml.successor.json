@@ -1,0 +1,28 @@
+{
+    "comments": {
+        "inlineComment" : "(*)",
+        "blockComment": [ "(*", "*)" ]
+    },
+    "brackets": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "surroundingPairs": [
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""]
+    ],
+    "folding": {
+        "markers": {
+            "start": "\\(\\*|\\b(struct|sig|let)\\b",
+            "end": "\\*\\)|\\bend\\b"
+        }
+    }    
+}

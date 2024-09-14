@@ -1,18 +1,22 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Standard ML",
+  "name": "Successor ML",
   "patterns": [
     {
-      "include": "#comments"
+      "include": "#blockComments"
+    },
+    {
+      "match": "\\(\\*.*$",
+      "name": "comment.line.other.sml.successor"
     },
     {
       "match": "(raise)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "keyword.control.sml"
+          "name": "keyword.control.sml.successor"
         },
         "2": {
-          "name": "variable.other.constant.sml"
+          "name": "variable.other.constant.sml.successor"
         }
       }
     },
@@ -20,10 +24,10 @@
       "match": "(handle)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "keyword.control.sml"
+          "name": "keyword.control.sml.successor"
         },
         "2": {
-          "name": "variable.other.constant.sml"
+          "name": "variable.other.constant.sml.successor"
         }
       }
     },
@@ -31,7 +35,7 @@
       "match": "(of)\\s+(?:(?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)\\s*)*\\=\\>",
       "captures": {
         "1": {
-          "name": "keyword.control.sml"
+          "name": "keyword.control.sml.successor"
         }
       }
     },
@@ -39,10 +43,10 @@
       "match": "(of)\\s+((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*))",
       "captures": {
         "1": {
-          "name": "keyword.control.sml"
+          "name": "keyword.control.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -50,10 +54,10 @@
       "match": "(open)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "keyword.control.sml"
+          "name": "keyword.control.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -61,10 +65,10 @@
       "match": "(functor)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -72,13 +76,13 @@
       "match": "(type|eqtype)\\s+((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*))(\\s*?\\=\\s*?((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*)))?",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         },
         "25": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -86,10 +90,10 @@
       "match": "(\\bfun\\b)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "entity.name.function.sml"
+          "name": "entity.name.function.sml.successor"
         }
       }
     },
@@ -97,10 +101,10 @@
       "match": "(datatype)\\s+((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*))",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -108,10 +112,10 @@
       "match": "\\b(signature|structure)\\b\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -119,10 +123,10 @@
       "match": "(exception)\\s+(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "storage.type.sml"
+          "name": "storage.type.sml.successor"
         },
         "2": {
-          "name": "variable.other.constant.sml"
+          "name": "variable.other.constant.sml.successor"
         }
       }
     },
@@ -130,10 +134,10 @@
       "match": "(:>)\\s*?(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
       "captures": {
         "1": {
-          "name": "keyword.operator.sml"
+          "name": "keyword.operator.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -141,270 +145,18 @@
       "match": "(?<!:)(:)\\s*?((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*))",
       "captures": {
         "1": {
-          "name": "keyword.operator.sml"
+          "name": "keyword.operator.sml.successor"
         },
         "2": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
-    },
-    {
-      "match": "\\(?\\bfun\\b\\)?",
-      "name": "storage.type.fun.sml"
-    },
-    {
-      "match": "\\(?\\bval\\b\\)?",
-      "name": "storage.type.val.sml"
-    },
-    {
-      "match": "\\(?\\bexception\\b\\)?",
-      "name": "storage.type.exception.sml"
-    },
-    {
-      "match": "\\(?\\bdatatype\\b\\)?",
-      "name": "storage.type.datatype.sml"
-    },
-    {
-      "match": "\\(?\\btype\\b\\)?",
-      "name": "storage.type.type.sml"
-    },
-    {
-      "match": "\\(?\\beqtype\\b\\)?",
-      "name": "storage.type.eqtype.sml"
-    },
-    {
-      "match": "\\(?\\bsignature\\b\\)?",
-      "name": "storage.type.signature.sml"
-    },
-    {
-      "match": "\\(?\\bstructure\\b\\)?",
-      "name": "storage.type.structure.sml"
-    },
-    {
-      "match": "\\(?\\bfunctor\\b\\)?",
-      "name": "storage.type.functor.sml"
-    },
-    {
-      "match": "\\(?\\bif\\b\\)?",
-      "name": "keyword.control.if.sml"
-    },
-    {
-      "match": "\\(?\\bthen\\b\\)?",
-      "name": "keyword.control.then.sml"
-    },
-    {
-      "match": "\\(?\\belse\\b\\)?",
-      "name": "keyword.control.else.sml"
-    },
-    {
-      "match": "\\(?\\band\\b\\)?",
-      "name": "keyword.control.and.sml"
-    },
-    {
-      "match": "\\(?\\buse\\b\\)?",
-      "name": "keyword.control.use.sml"
-    },
-    {
-      "match": "\\(?\\braise\\b\\)?",
-      "name": "keyword.control.raise.sml"
-    },
-    {
-      "match": "\\(?\\bas\\b\\)?",
-      "name": "keyword.control.as.sml"
-    },
-    {
-      "match": "\\(?\\bcase\\b\\)?",
-      "name": "keyword.control.case.sml"
-    },
-    {
-      "match": "\\(?\\blet\\b\\)?",
-      "name": "keyword.control.let.sml"
-    },
-    {
-      "match": "\\(?\\bin\\b\\)?",
-      "name": "keyword.control.in.sml"
-    },
-    {
-      "match": "\\(?\\bend\\b\\)?",
-      "name": "keyword.control.end.sml"
-    },
-    {
-      "match": "\\(?\\bopen\\b\\)?",
-      "name": "keyword.control.open.sml"
-    },
-    {
-      "match": "\\(?\\bhandle\\b\\)?",
-      "name": "keyword.control.handle.sml"
-    },
-    {
-      "match": "\\(?\\bof\\b\\)?",
-      "name": "keyword.control.of.sml"
-    },
-    {
-      "match": "\\(?\\bsig\\b\\)?",
-      "name": "keyword.control.sig.sml"
-    },
-    {
-      "match": "\\(?\\bstruct\\b\\)?",
-      "name": "keyword.control.struct.sml"
-    },
-    {
-      "match": "\\(?\\bwhile\\b\\)?",
-      "name": "keyword.control.while.sml"
-    },
-    {
-      "match": "\\(?\\bdo\\b\\)?",
-      "name": "keyword.control.do.sml"
-    },
-    {
-      "match": "\\(?\\bref\\b\\)?",
-      "name": "storage.modifier.ref.sml"
-    },
-    {
-      "match": "\\(?\\bop\\b\\)?",
-      "name": "storage.modifier.op.sml"
-    },
-    {
-      "match": "\\(?\\bfn\\b\\)?",
-      "name": "keyword.other.fn.sml"
-    },
-    {
-      "match": "\\(?\\b-\\b\\)?",
-      "name": "keyword.operator.-.sml"
-    },
-    {
-      "match": "\\(?\\b=\\b\\)?",
-      "name": "keyword.operator.=.sml"
-    },
-    {
-      "match": "\\(?\\b<>\\b\\)?",
-      "name": "keyword.operator.<>.sml"
-    },
-    {
-      "match": "\\(?\\b<\\b\\)?",
-      "name": "keyword.operator.<.sml"
-    },
-    {
-      "match": "\\(?\\b>\\b\\)?",
-      "name": "keyword.operator.>.sml"
-    },
-    {
-      "match": "\\(?\\bandalso\\b\\)?",
-      "name": "keyword.operator.andalso.sml"
-    },
-    {
-      "match": "\\(?\\borelse\\b\\)?",
-      "name": "keyword.operator.orelse.sml"
-    },
-    {
-      "match": "\\(?\\b@\\b\\)?",
-      "name": "keyword.operator.@.sml"
-    },
-    {
-      "match": "\\(?\\b::\\b\\)?",
-      "name": "keyword.operator.::.sml"
-    },
-    {
-      "match": "\\(?\\b:\\b\\)?",
-      "name": "keyword.operator.:.sml"
-    },
-    {
-      "match": "\\(?\\b:=\\b\\)?",
-      "name": "keyword.operator.:=.sml"
-    },
-    {
-      "match": "\\(?\\b:>\\b\\)?",
-      "name": "keyword.operator.:>.sml"
-    },
-    {
-      "match": "\\(?\\bdiv\\b\\)?",
-      "name": "keyword.operator.div.sml"
-    },
-    {
-      "match": "\\(?\\bmod\\b\\)?",
-      "name": "keyword.operator.mod.sml"
-    },
-    {
-      "match": "\\(?\\bandalso\\b\\)?",
-      "name": "keyword.operator.andalso.sml"
-    },
-    {
-      "match": "\\(?\\borelse\\b\\)?",
-      "name": "keyword.operator.orelse.sml"
-    },
-    {
-      "match": "\\(?\\b=>\\b\\)?",
-      "name": "keyword.operator.=>.sml"
-    },
-    {
-      "match": "\\(?\\b<=\\b\\)?",
-      "name": "keyword.operator.<=.sml"
-    },
-    {
-      "match": "\\(?\\b!\\b\\)?",
-      "name": "keyword.operator.!.sml"
-    },
-    {
-      "match": "\\(?\\b\\^\\b\\)?",
-      "name": "keyword.operator.^.sml"
-    },
-    {
-      "match": "\\(?\\b\\+\\b\\)?",
-      "name": "keyword.operator.+.sml"
-    },
-    {
-      "match": "\\(?\\b\\*\\b\\)?",
-      "name": "keyword.operator.*.sml"
-    },
-    {
-      "match": "\\(?\\b\\/\\b\\)?",
-      "name": "keyword.operator./.sml"
-    },
-    {
-      "match": "\\(?\\btrue\\b\\)?",
-      "name": "constant.language.true.sml"
-    },
-    {
-      "match": "\\(?\\bfalse\\b\\)?",
-      "name": "constant.language.false.sml"
-    },
-    {
-      "match": "\\(?\\bnot\\b\\)?",
-      "name": "constant.language.not.sml"
-    },
-    {
-      "match": "\\(?\\bSOME\\b\\)?",
-      "name": "constant.language.SOME.sml"
-    },
-    {
-      "match": "\\(?\\bNONE\\b\\)?",
-      "name": "constant.language.NONE.sml"
-    },
-    {
-      "match": "\\(?\\bnil\\b\\)?",
-      "name": "constant.language.nil.sml"
-    },
-    {
-      "match": "\\(?\\bLESS\\b\\)?",
-      "name": "constant.language.LESS.sml"
-    },
-    {
-      "match": "\\(?\\bEQUAL\\b\\)?",
-      "name": "constant.language.EQUAL.sml"
-    },
-    {
-      "match": "\\(?\\bGREATER\\b\\)?",
-      "name": "constant.language.GREATER.sml"
-    },
-    {
-      "match": "\\(?\\b_\\b\\)?",
-      "name": "constant.language._.sml"
     },
     {
       "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\.",
       "captures": {
         "1": {
-          "name": "support.type.sml"
+          "name": "support.type.sml.successor"
         }
       }
     },
@@ -412,7 +164,7 @@
       "match": "(?<=\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b\\s+)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
-          "name": "entity.name.function.sml"
+          "name": "entity.name.function.sml.successor"
         }
       }
     },
@@ -420,7 +172,7 @@
       "match": "(?<=(-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\s*)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
-          "name": "entity.name.function.sml"
+          "name": "entity.name.function.sml.successor"
         }
       }
     },
@@ -428,13 +180,13 @@
       "match": "(?<=^|;|,|\\#|\\)|\\()(?<!\\(\\))\\s*(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
-          "name": "entity.name.function.sml"
+          "name": "entity.name.function.sml.successor"
         }
       }
     },
     {
       "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\s*\\(",
-      "name": "entity.name.function.sml"
+      "name": "entity.name.function.sml.successor"
     },
     {
       "name": "string.quoted.double.ml",
@@ -453,23 +205,23 @@
     },
     {
       "match": "\\b\\d+\\b",
-      "name": "constant.numeric.sml"
+      "name": "constant.numeric.sml.successor"
     },
     {
       "match": "\\b([A-Z][A-Z0-9_']*?[A-Z0-9_'])\\b",
-      "name": "variable.other.constant.sml"
+      "name": "variable.other.constant.sml.successor"
     },
     {
       "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))",
-      "name": "variable.other.sml"
+      "name": "variable.other.sml.successor"
     }
   ],
-  "scopeName": "source.sml",
+  "scopeName": "source.sml.successor",
   "repository": {
     "comments": {
       "patterns": [
         {
-          "name": "comment.block.sml",
+          "name": "comment.block.sml.successor",
           "begin": "\\(\\*",
           "end": "\\*\\)",
           "patterns": [

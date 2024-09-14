@@ -4,6 +4,7 @@ const path = require('path');
 
 // --------------------- Start: Preprocessor Definition
 var tmLanguage = [];
+var successor_tmLanguage = [];
 var repository = {};
 var keywords = [];
 var keywordsByType = {};
@@ -54,6 +55,15 @@ function addRepositoryPattern(name, pattern) {
 
 function addPattern(pattern) {
   tmLanguage.push(pattern);
+  successor_tmLanguage.push(pattern);
+}
+
+function addPurePattern(pattern){
+  tmLanguage.push(pattern);
+}
+
+function addSuccessorPattern(pattern) {
+  successor_tmLanguage.push(pattern);
 }
 
 function addKeywordPattern(match, captures){
@@ -76,9 +86,19 @@ const identifier = `(${identifier_not_captured})`;
 const type = `(\\(?${identifier}\\)?|\\(?'*${identifier}\\)?)(\\s*(\\(?${identifier}\\)?|\\(?'*${identifier}\\)?)?)*((\\s*(\\*|->)\\s*(\\(?${identifier}\\)?(\\s*(\\(?${identifier}\\)?|\\(?'*${identifier}\\)?)?)*|\\(?'*${identifier}\\)?(\\s*(\\(?${identifier}\\)?|\\(?'*${identifier}\\)?)?)*|\\(.*?\\)))*)`;
 
 // Priotity patterns
+
+addSuccessorPattern({
+  include: "#blockComments"
+});
+
+addSuccessorPattern({
+  "match": "\\(\\*.*$",
+  "name": "comment.line.other.sml"
+});
+
 addRepositoryPattern("comments",
   {
-    "name": "comment.block.ml",
+    "name": "comment.block.sml",
     "begin": "\\(\\*",
     "end": "\\*\\)",
     "patterns": [
@@ -89,7 +109,30 @@ addRepositoryPattern("comments",
   }
 );
 
-addPattern({
+addRepositoryPattern("blockComments",
+  {
+    "name": "comment.block.ml",
+    "begin": "\\(\\*[^)]",
+    "end": "(?<!\\()\\*\\)",
+    "beginCaptures": {
+      "0": {
+        "name": "comment.block.ml"
+      }
+    },
+    "endCaptures": {
+      "0": {
+        "name": "comment.block.ml"
+      }
+    },
+    "patterns": [
+      {
+        "include": "#blockComments"
+      }
+    ]
+  }
+);
+
+addPurePattern({
   include: "#comments"
 });
 
@@ -238,11 +281,31 @@ const tmLanguageFile = {
   "repository": repository
 };
 
+const successor_tmLanguageFile = {
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Successor ML",
+  "patterns": successor_tmLanguage.map(({ match, name, begin, end, patterns, include, captures }) => {
+    const patternObj = { match, name, begin, end, patterns, include, captures };
+    // Clean up undefined properties
+    Object.entries(patternObj).forEach(([key, value]) => {
+      if (value === undefined) {
+        delete patternObj[key];
+      }
+    });
+    return patternObj;
+  }),
+  "scopeName": "source.sml", // scope is normalized afterwards
+  "repository": repository
+};
+
 // Define the output file path
 const outputFilePath = path.join(__dirname, 'ml.tmLanguage.json');
+const successor_outputFilePath = path.join(__dirname, 'ml.successor.tmLanguage.json');
 
 // Serialize the structure to a JSON string
 const tmLanguageFileJson = JSON.stringify(tmLanguageFile, null, 2); // Pretty print with 2 spaces
+
+const successor_tmLanguageFileJson = JSON.stringify(successor_tmLanguageFile, null, 2).replaceAll(".sml", ".sml.successor"); // Normalize scope
 
 // Write the JSON string to the file
 fs.writeFile(outputFilePath, tmLanguageFileJson, 'utf8', (err) => {
@@ -250,6 +313,14 @@ fs.writeFile(outputFilePath, tmLanguageFileJson, 'utf8', (err) => {
     console.error("Error writing the JSON to the file:", err);
   } else {
     console.log("tmLanguage.json successfully created.");
+  }
+});
+
+fs.writeFile(successor_outputFilePath, successor_tmLanguageFileJson, 'utf8', (err) => {
+  if (err) {
+    console.error("Error writing the Successor JSON to the file:", err);
+  } else {
+    console.log("Successor tmLanguage.json successfully created.");
   }
 });
 // --------------------- End: JSON creation
