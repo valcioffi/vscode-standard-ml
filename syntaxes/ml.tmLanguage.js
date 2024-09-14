@@ -144,7 +144,7 @@ addKeywordPattern(`(of)\\s+(${type})`,["keyword.control.sml","support.type.sml"]
 addKeywordPattern(`(open)\\s+(${identifier})`,["keyword.control.sml","support.type.sml"]);
 addKeywordPattern(`(functor)\\s+(${identifier})`,["storage.type.sml","support.type.sml"]);
 addPattern({
-  match: `(type|eqtype)\\s+(${type})(\\s*?\\=\\s*?(${type}))?`,
+  match: `(type|eqtype)\\s+((\\((\\(([^()]*(?:\\([^()]*\\)[^()]*)*)\\)\\s+\\,)?([^()]*(?:\\([^()]*\\)[^()]*)*)\\)\\s+)?${type}?)(\\s*?\\=\\s*?(${type}))?`,
   captures: {
     "1": {
       name: "storage.type.sml"
@@ -152,7 +152,7 @@ addPattern({
     "2": {
       name: "support.type.sml"
     },
-    "25": {
+    "29": {
       name: "support.type.sml",
     }
   }
@@ -176,10 +176,12 @@ addKeyword("^", "operator", false, "\\^");
 addKeyword("+", "operator", false, "\\+");
 addKeyword("*", "operator", false, "\\*");
 addKeyword("/", "operator", false, "\\/");
+addKeyword("|", "operator", false, "\\|");
 
 // Define constants
 addConstants(["true", "false", "not", "SOME", "NONE", "nil", "LESS", "EQUAL", "GREATER", "_"]);
 tmLanguage.push(...tmLanguage_last);
+successor_tmLanguage.push(...tmLanguage_last);
 
 // Construct the regex patterns
 const keyword = `\\b(${keywords.join("|")})\\b`

@@ -73,7 +73,7 @@
       }
     },
     {
-      "match": "(type|eqtype)\\s+((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*))(\\s*?\\=\\s*?((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*)))?",
+      "match": "(type|eqtype)\\s+((\\((\\(([^()]*(?:\\([^()]*\\)[^()]*)*)\\)\\s+\\,)?([^()]*(?:\\([^()]*\\)[^()]*)*)\\)\\s+)?(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*)?)(\\s*?\\=\\s*?((\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*((\\s*(\\*|->)\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?(\\s*(\\(?((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?|\\(?'*((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))\\)?)?)*|\\(.*?\\)))*)))?",
       "captures": {
         "1": {
           "name": "storage.type.sml.successor"
@@ -81,7 +81,7 @@
         "2": {
           "name": "support.type.sml.successor"
         },
-        "25": {
+        "29": {
           "name": "support.type.sml.successor"
         }
       }
@@ -153,6 +153,262 @@
       }
     },
     {
+      "match": "\\(?\\bfun\\b\\)?",
+      "name": "storage.type.fun.sml.successor"
+    },
+    {
+      "match": "\\(?\\bval\\b\\)?",
+      "name": "storage.type.val.sml.successor"
+    },
+    {
+      "match": "\\(?\\bexception\\b\\)?",
+      "name": "storage.type.exception.sml.successor"
+    },
+    {
+      "match": "\\(?\\bdatatype\\b\\)?",
+      "name": "storage.type.datatype.sml.successor"
+    },
+    {
+      "match": "\\(?\\btype\\b\\)?",
+      "name": "storage.type.type.sml.successor"
+    },
+    {
+      "match": "\\(?\\beqtype\\b\\)?",
+      "name": "storage.type.eqtype.sml.successor"
+    },
+    {
+      "match": "\\(?\\bsignature\\b\\)?",
+      "name": "storage.type.signature.sml.successor"
+    },
+    {
+      "match": "\\(?\\bstructure\\b\\)?",
+      "name": "storage.type.structure.sml.successor"
+    },
+    {
+      "match": "\\(?\\bfunctor\\b\\)?",
+      "name": "storage.type.functor.sml.successor"
+    },
+    {
+      "match": "\\(?\\bif\\b\\)?",
+      "name": "keyword.control.if.sml.successor"
+    },
+    {
+      "match": "\\(?\\bthen\\b\\)?",
+      "name": "keyword.control.then.sml.successor"
+    },
+    {
+      "match": "\\(?\\belse\\b\\)?",
+      "name": "keyword.control.else.sml.successor"
+    },
+    {
+      "match": "\\(?\\band\\b\\)?",
+      "name": "keyword.control.and.sml.successor"
+    },
+    {
+      "match": "\\(?\\buse\\b\\)?",
+      "name": "keyword.control.use.sml.successor"
+    },
+    {
+      "match": "\\(?\\braise\\b\\)?",
+      "name": "keyword.control.raise.sml.successor"
+    },
+    {
+      "match": "\\(?\\bas\\b\\)?",
+      "name": "keyword.control.as.sml.successor"
+    },
+    {
+      "match": "\\(?\\bcase\\b\\)?",
+      "name": "keyword.control.case.sml.successor"
+    },
+    {
+      "match": "\\(?\\blet\\b\\)?",
+      "name": "keyword.control.let.sml.successor"
+    },
+    {
+      "match": "\\(?\\bin\\b\\)?",
+      "name": "keyword.control.in.sml.successor"
+    },
+    {
+      "match": "\\(?\\bend\\b\\)?",
+      "name": "keyword.control.end.sml.successor"
+    },
+    {
+      "match": "\\(?\\bopen\\b\\)?",
+      "name": "keyword.control.open.sml.successor"
+    },
+    {
+      "match": "\\(?\\bhandle\\b\\)?",
+      "name": "keyword.control.handle.sml.successor"
+    },
+    {
+      "match": "\\(?\\bof\\b\\)?",
+      "name": "keyword.control.of.sml.successor"
+    },
+    {
+      "match": "\\(?\\bsig\\b\\)?",
+      "name": "keyword.control.sig.sml.successor"
+    },
+    {
+      "match": "\\(?\\bstruct\\b\\)?",
+      "name": "keyword.control.struct.sml.successor"
+    },
+    {
+      "match": "\\(?\\bwhile\\b\\)?",
+      "name": "keyword.control.while.sml.successor"
+    },
+    {
+      "match": "\\(?\\bdo\\b\\)?",
+      "name": "keyword.control.do.sml.successor"
+    },
+    {
+      "match": "\\(?\\bref\\b\\)?",
+      "name": "storage.modifier.ref.sml.successor"
+    },
+    {
+      "match": "\\(?\\bop\\b\\)?",
+      "name": "storage.modifier.op.sml.successor"
+    },
+    {
+      "match": "\\(?\\bfn\\b\\)?",
+      "name": "keyword.other.fn.sml.successor"
+    },
+    {
+      "match": "\\(?\\b-\\b\\)?",
+      "name": "keyword.operator.-.sml.successor"
+    },
+    {
+      "match": "\\(?\\b=\\b\\)?",
+      "name": "keyword.operator.=.sml.successor"
+    },
+    {
+      "match": "\\(?\\b<>\\b\\)?",
+      "name": "keyword.operator.<>.sml.successor"
+    },
+    {
+      "match": "\\(?\\b<\\b\\)?",
+      "name": "keyword.operator.<.sml.successor"
+    },
+    {
+      "match": "\\(?\\b>\\b\\)?",
+      "name": "keyword.operator.>.sml.successor"
+    },
+    {
+      "match": "\\(?\\bandalso\\b\\)?",
+      "name": "keyword.operator.andalso.sml.successor"
+    },
+    {
+      "match": "\\(?\\borelse\\b\\)?",
+      "name": "keyword.operator.orelse.sml.successor"
+    },
+    {
+      "match": "\\(?\\b@\\b\\)?",
+      "name": "keyword.operator.@.sml.successor"
+    },
+    {
+      "match": "\\(?\\b::\\b\\)?",
+      "name": "keyword.operator.::.sml.successor"
+    },
+    {
+      "match": "\\(?\\b:\\b\\)?",
+      "name": "keyword.operator.:.sml.successor"
+    },
+    {
+      "match": "\\(?\\b:=\\b\\)?",
+      "name": "keyword.operator.:=.sml.successor"
+    },
+    {
+      "match": "\\(?\\b:>\\b\\)?",
+      "name": "keyword.operator.:>.sml.successor"
+    },
+    {
+      "match": "\\(?\\bdiv\\b\\)?",
+      "name": "keyword.operator.div.sml.successor"
+    },
+    {
+      "match": "\\(?\\bmod\\b\\)?",
+      "name": "keyword.operator.mod.sml.successor"
+    },
+    {
+      "match": "\\(?\\bandalso\\b\\)?",
+      "name": "keyword.operator.andalso.sml.successor"
+    },
+    {
+      "match": "\\(?\\borelse\\b\\)?",
+      "name": "keyword.operator.orelse.sml.successor"
+    },
+    {
+      "match": "\\(?\\b=>\\b\\)?",
+      "name": "keyword.operator.=>.sml.successor"
+    },
+    {
+      "match": "\\(?\\b<=\\b\\)?",
+      "name": "keyword.operator.<=.sml.successor"
+    },
+    {
+      "match": "\\(?\\b!\\b\\)?",
+      "name": "keyword.operator.!.sml.successor"
+    },
+    {
+      "match": "\\(?\\b\\^\\b\\)?",
+      "name": "keyword.operator.^.sml.successor"
+    },
+    {
+      "match": "\\(?\\b\\+\\b\\)?",
+      "name": "keyword.operator.+.sml.successor"
+    },
+    {
+      "match": "\\(?\\b\\*\\b\\)?",
+      "name": "keyword.operator.*.sml.successor"
+    },
+    {
+      "match": "\\(?\\b\\/\\b\\)?",
+      "name": "keyword.operator./.sml.successor"
+    },
+    {
+      "match": "\\(?\\b\\|\\b\\)?",
+      "name": "keyword.operator.|.sml.successor"
+    },
+    {
+      "match": "\\(?\\btrue\\b\\)?",
+      "name": "constant.language.true.sml.successor"
+    },
+    {
+      "match": "\\(?\\bfalse\\b\\)?",
+      "name": "constant.language.false.sml.successor"
+    },
+    {
+      "match": "\\(?\\bnot\\b\\)?",
+      "name": "constant.language.not.sml.successor"
+    },
+    {
+      "match": "\\(?\\bSOME\\b\\)?",
+      "name": "constant.language.SOME.sml.successor"
+    },
+    {
+      "match": "\\(?\\bNONE\\b\\)?",
+      "name": "constant.language.NONE.sml.successor"
+    },
+    {
+      "match": "\\(?\\bnil\\b\\)?",
+      "name": "constant.language.nil.sml.successor"
+    },
+    {
+      "match": "\\(?\\bLESS\\b\\)?",
+      "name": "constant.language.LESS.sml.successor"
+    },
+    {
+      "match": "\\(?\\bEQUAL\\b\\)?",
+      "name": "constant.language.EQUAL.sml.successor"
+    },
+    {
+      "match": "\\(?\\bGREATER\\b\\)?",
+      "name": "constant.language.GREATER.sml.successor"
+    },
+    {
+      "match": "\\(?\\b_\\b\\)?",
+      "name": "constant.language._.sml.successor"
+    },
+    {
       "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\.",
       "captures": {
         "1": {
@@ -161,7 +417,7 @@
       }
     },
     {
-      "match": "(?<=\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b\\s+)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
+      "match": "(?<=\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\b\\s+)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
           "name": "entity.name.function.sml.successor"
@@ -169,7 +425,7 @@
       }
     },
     {
-      "match": "(?<=(-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\s*)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
+      "match": "(?<=(-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\s*)(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
           "name": "entity.name.function.sml.successor"
@@ -177,7 +433,7 @@
       }
     },
     {
-      "match": "(?<=^|;|,|\\#|\\)|\\()(?<!\\(\\))\\s*(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
+      "match": "(?<=^|;|,|\\#|\\)|\\()(?<!\\(\\))\\s*(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))(?=\\s+(?:(?!\\b(andalso|orelse)\\b)(?!\\b(fun|val|exception|datatype|type|eqtype|signature|structure|functor|if|then|else|and|use|raise|as|case|let|in|end|open|handle|of|sig|struct|while|do|ref|op|fn|-|=|<>|<|>|andalso|orelse|@|::|:|:=|:>|div|mod|andalso|orelse|=>|<=|!|\\^|\\+|\\*|\\/|\\|)\\b)((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\))|\\d+|\"(?:[^\"\\\\]|\\\\.)*\"|#\"[^\"]*\"))",
       "captures": {
         "2": {
           "name": "entity.name.function.sml.successor"
