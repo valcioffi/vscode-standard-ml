@@ -185,23 +185,23 @@
       }
     },
     {
-      "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\s*\\(",
+      "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\s*\\([^\\*]",
       "name": "entity.name.function.sml.successor"
     },
     {
-      "name": "string.quoted.double.ml",
+      "name": "string.quoted.double.sml.successor",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.ml",
+          "name": "constant.character.escape.sml.successor",
           "match": "\\\\."
         }
       ]
     },
     {
       "match": "#\"(.)\"",
-      "name": "string.quoted.single.ml"
+      "name": "string.quoted.single.sml.successor"
     },
     {
       "match": "\\b\\d+\\b",
@@ -235,17 +235,17 @@
     "blockComments": {
       "patterns": [
         {
-          "name": "comment.block.ml",
+          "name": "comment.block.sml.successor",
           "begin": "\\(\\*[^)]",
           "end": "(?<!\\()\\*\\)",
           "beginCaptures": {
             "0": {
-              "name": "comment.block.ml"
+              "name": "comment.block.sml.successor"
             }
           },
           "endCaptures": {
             "0": {
-              "name": "comment.block.ml"
+              "name": "comment.block.sml.successor"
             }
           },
           "patterns": [

@@ -433,23 +433,23 @@
       }
     },
     {
-      "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\s*\\(",
+      "match": "(((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*|\\((?<=^|[^a-zA-Z0-9_])[a-zA-Z_'][a-zA-Z0-9_']*\\)|\\(\\s*?\\)))\\s*\\([^\\*]",
       "name": "entity.name.function.sml"
     },
     {
-      "name": "string.quoted.double.ml",
+      "name": "string.quoted.double.sml",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.ml",
+          "name": "constant.character.escape.sml",
           "match": "\\\\."
         }
       ]
     },
     {
       "match": "#\"(.)\"",
-      "name": "string.quoted.single.ml"
+      "name": "string.quoted.single.sml"
     },
     {
       "match": "\\b\\d+\\b",
@@ -483,17 +483,17 @@
     "blockComments": {
       "patterns": [
         {
-          "name": "comment.block.ml",
+          "name": "comment.block.sml",
           "begin": "\\(\\*[^)]",
           "end": "(?<!\\()\\*\\)",
           "beginCaptures": {
             "0": {
-              "name": "comment.block.ml"
+              "name": "comment.block.sml"
             }
           },
           "endCaptures": {
             "0": {
-              "name": "comment.block.ml"
+              "name": "comment.block.sml"
             }
           },
           "patterns": [
