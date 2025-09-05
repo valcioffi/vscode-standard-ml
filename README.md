@@ -9,19 +9,51 @@ The **ML/Standard ML** extension adds language support for ML/Standard ML to Vis
 
 ## Features
 
-* **Advanced Syntax Highlighting** - Enhances code readability by contextually coloring text beyond basic syntax, aiding in understanding complex structures.
+- **Advanced Syntax Highlighting** - Enhances code readability by contextually coloring text beyond basic syntax, aiding in understanding complex structures.
 <p align="center">
 <img src="assets/docs/highlight.png" width=65% alt="Advanced Syntax Highlighting example">
 <br/>
 </p>
 
 <!--* **IntelliSense** - Provides smart completions based on variable types, function definitions, and imported modules, enhancing coding efficiency and accuracy.-->
-* **Code Editing** - Offers advanced editing capabilities tailored for ML/Standard ML programming, including the use of snippets for faster and error-free coding.
+
+- **Code Editing** - Offers advanced editing capabilities tailored for ML/Standard ML programming, including the use of snippets for faster and error-free coding.
 <p align="center">
 <img src="assets/docs/snippets.gif" width=65% alt="Using snippets">
 <br/>
 </p>
 
+### Switching between Standard ML and Successor ML
+
+This extension contributes two distinct languages: `Standard ML` (`sml`) and `Successor ML` (`sml-successor`). To change which language is used for a file, use one of the options below.
+
+The default language for files with the `.ml`, `.sml`, and `.cm` extension is `Standard ML`. You can change this default behavior by setting a file association.
+
+- Change language for the current open file:
+
+  - Command Palette -> "Change Language Mode" -> choose "Standard ML" or "Successor ML".
+
+- Set a workspace-specific file association (applies only in the current workspace):
+  - Create or edit `.vscode/settings.json` in your project and add the same `files.associations` entry. Example to map `.ml` files to Standard ML for this workspace only:
+
+```json
+{
+  "files.associations": {
+    "*.ml": "sml"
+  }
+}
+```
+
+- Set a global file association (applies for your user across all workspaces):
+  - Open your User Settings (`Ctrl+,`) and edit settings.json, or use the UI. Example to map `.ml` files to Successor ML globally:
+
+```json
+{
+  "files.associations": {
+    "*.ml": "sml-successor"
+  }
+}
+```
 
 <!--
 ## Requirements
@@ -39,19 +71,18 @@ This extension contributes the following settings:
 Calling out known issues can help limit users opening duplicate issues against your extension.
 -->
 
-
->  **Enjoy learning ML! 🎉**
+> **Enjoy learning ML! 🎉**
 
 ## Contributing
 
 This is an open source project and contributions from the community are warmly accepted! Whether it's fixing bugs, adding new features, or improving documentation, your help is greatly appreciated.
 
-
 If you're interested in improving the **ML/Standard ML** extension for Visual Studio Code, please take a look at the [contributing guidelines](CONTRIBUTING.md) for information on how to get started.
 
 ---
+
 If you like and use this extension, consider <a href="https:///www.ko-fi.com/valcioffi">gifting a me coffee</a>.
 
-**Developed with ❤️ by Valenino Cioffi and contributors** 
+**Developed with ❤️ by Valenino Cioffi and contributors**
 
 <a href="https://www.ciof.fi"><img src="assets/docs/author-logo.png" width=30% alt="Advanced Syntax Highlighting example"></a>
